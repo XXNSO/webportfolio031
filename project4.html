@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ไข่เจียวกรอบ</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black text-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-cyan-400 text-black p-4 shadow-lg">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-lg font-bold">My Portfolio</h1>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="hover:text-gray-800">Home</a></li>
+          <li><a href="portfolio.html" class="hover:text-gray-800">Portfolio</a></li>
+          <li><a href="contact.html" class="hover:text-gray-800">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Project Section -->
+    <section class="container mx-auto my-12 max-w-3xl bg-gray-900 p-6 rounded-lg shadow-lg">
+      <h1 class="text-3xl font-bold text-cyan-400 text-center">ไข่เจียวกรอบ</h1>
+      <img
+        src="img/omlet.jpg"
+        alt="ไข่เจียวกรอบ"
+        class="w-full rounded mt-4 border-2 border-cyan-400"
+      />
+      <p class="text-gray-400 mt-4 text-center">
+        เมนูง่ายๆ กรอบนอก นุ่มใน
+      </p>
+
+      <h2 class="text-2xl font-semibold text-cyan-300 mt-6">🥚 วัตถุดิบ</h2>
+      <ul class="text-gray-300 list-disc list-inside mt-2 space-y-1">
+        <li>ไข่ไก่ 2 ฟอง</li>
+        <li>น้ำปลา 1 ช้อนชา</li>
+        <li>น้ำมันพืช (สำหรับทอด)</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold text-cyan-300 mt-6">🍳 วิธีทำ</h2>
+      <ol class="text-gray-300 list-decimal list-inside mt-2 space-y-1">
+        <li>ตอกไข่ใส่ชาม ตีให้เข้ากัน ใส่น้ำปลา</li>
+        <li>ตั้งกระทะใส่น้ำมันให้ร้อนจัด</li>
+        <li>เทไข่ลงไปทอดให้พองฟูจนเหลืองกรอบ</li>
+        <li>ตักขึ้นสะเด็ดน้ำมัน เสิร์ฟพร้อมซอสน้ำปลาพริก</li>
+      </ol>
+
+      <!-- Nutrition Facts -->
+      <h2 class="text-2xl font-semibold text-cyan-300 mt-6">🔬 ข้อมูลโภชนาการ</h2>
+      <table class="w-full border border-cyan-400 text-white mt-4">
+        <thead>
+          <tr class="bg-cyan-400 text-white">
+            <th class="p-2 border">สารอาหาร</th>
+            <th class="p-2 border">ปริมาณ</th>
+            <th class="p-2 border">หน่วย</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border">
+            <td class="p-2 border">โปรตีน</td>
+            <td class="p-2 border">300</td>
+            <td class="p-2 border">g.</td>
+          </tr>
+          <tr class="border">
+            <td class="p-2 border">ไขมัน</td>
+            <td class="p-2 border">100</td>
+            <td class="p-2 border">g.</td>
+          </tr>
+          <tr class="border">
+            <td class="p-2 border">คาร์โบไฮเดรต</td>
+            <td class="p-2 border">200</td>
+            <td class="p-2 border">g.</td>
+          </tr>
+          <tr class="border">
+            <td class="p-2 border">วิตามินซี</td>
+            <td class="p-2 border">50</td>
+            <td class="p-2 border">mg.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="text-gray-400 mt-2">
+        *ขึ้นอยู่กับส่วนผสมและปริมาณที่ใช้
+      </p>
+
+      <!-- Source -->
+      <p class="mt-4 text-gray-400">
+        แหล่งที่มา:
+        <a href="https://www.wongnai.com/recipes/ugc/c57479caf0dc46f0b346111b7409898f" target="_blank" class="text-cyan-400 hover:underline">Wongnai</a>
+      </p>
+
+      <!-- Comment Section -->
+      <h2 class="text-2xl font-semibold text-cyan-300 mt-6">💬 แสดงความคิดเห็น</h2>
+      <form action="#" method="POST" class="mt-4">
+        <label class="block text-white">
+          ความคิดเห็น:
+          <textarea
+            class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded"
+            placeholder="เขียนความคิดเห็นของคุณที่นี่..."
+            rows="4"
+          ></textarea>
+        </label>
+        <button
+          type="submit"
+          class="mt-3 w-full p-3 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-black shadow-lg transition transform hover:scale-105"
+        >
+          ส่งความคิดเห็น
+        </button>
+      </form>
+
+      <div class="text-center mt-6">
+        <a href="portfolio.html" class="text-cyan-400 font-semibold hover:underline">
+          ⬅ Back to Portfolio
+        </a>
+      </div>
+    </section>
+  </body>
+</html>

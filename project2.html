@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white">
+    <div class="container mx-auto p-8 max-w-lg bg-gray-900 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-cyan-400 text-center">ฟอร์มรับสมัครศิษย์เก่า IT + IS</h1>
+        <form id="alumniForm" action="#" method="POST" class="mt-6 space-y-4">
+            <label class="block">
+                <span class="text-white">ชื่อ-สกุล:</span>
+                <input type="text" name="fullname" required class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded">
+            </label>
+            <label class="block">
+                <span class="text-white">รหัสนักศึกษา:</span>
+                <input type="text" name="student_id" required class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded">
+            </label>
+            <label class="block">
+                <span class="text-white">เพศ:</span>
+                <select name="gender" required class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded">
+                    <option value="">เลือกเพศ</option>
+                    <option>ชาย</option>
+                    <option>หญิง</option>
+                    <option>อื่นๆ</option>
+                </select>
+            </label>
+            <label class="block">
+                <span class="text-white">ปีการศึกษาที่เข้าศึกษา:</span>
+                <input type="text" name="year" required class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded">
+            </label>
+            <label class="block">
+                <span class="text-white">ที่อยู่:</span>
+                <input type="text" name="address" required class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded">
+            </label>
+            <label class="block">
+                <span class="text-white">อีเมล:</span>
+                <input type="email" name="email" required class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded">
+            </label>
+            <label class="block">
+                <span class="text-white">เบอร์โทรศัพท์:</span>
+                <input type="tel" name="phone" required class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded">
+            </label>
+            <label class="block">
+                <span class="text-white">ชื่อหลักสูตร:</span>
+                <select name="course" required class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded">
+                    <option value="">เลือกหลักสูตร</option>
+                    <option>IT</option>
+                    <option>IS</option>
+                </select>
+            </label>
+            <label class="block">
+                <span class="text-white">อาชีพปัจจุบัน:</span>
+                <select name="job" required class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded">
+                    <option value="">เลือกอาชีพ</option>
+                    <option>Web Developer</option>
+                    <option>SA</option>
+                    <option>Graphic Design</option>
+                    <option>Digital Marketing</option>
+                </select>
+            </label>
+            <label class="block">
+                <span class="text-white">สถานที่ทำงาน (ระบุชื่อบริษัทและที่อยู่):</span>
+                <input type="text" name="workplace" required class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded">
+            </label>
+            <label class="block">
+                <span class="text-white">ประเภทงานที่ทำ:</span>
+                <select name="job_type" required class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded">
+                    <option value="">เลือกประเภทงาน</option>
+                    <option>Web Developer</option>
+                    <option>SA</option>
+                    <option>Graphic Design</option>
+                    <option>Digital Marketing</option>
+                </select>
+            </label>
+            <label class="block">
+                <span class="text-white">อัปโหลดรูปถ่าย:</span>
+                <input type="file" name="photo" required class="w-full p-2 mt-1 bg-gray-800 border border-cyan-400 rounded">
+            </label>
+            <button type="submit" class="w-full p-3 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-black shadow-lg transition transform hover:scale-105">
+                ส่งข้อมูล
+            </button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("alumniForm").addEventListener("submit", function(event) {
+            let inputs = this.querySelectorAll("input[required], select[required]");
+            let firstInvalid = null;
+
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    if (!firstInvalid) {
+                        firstInvalid = input; // ช่องแรกที่ไม่ได้กรอก
+                    }
+                    input.setCustomValidity("Please fill out this field."); // กำหนดข้อความแจ้งเตือน
+                } else {
+                    input.setCustomValidity(""); // ล้างข้อความแจ้งเตือนหากมีการกรอก
+                }
+            });
+
+            if (firstInvalid) {
+                event.preventDefault(); // ป้องกันการส่งข้อมูลหากกรอกไม่ครบ
+                firstInvalid.reportValidity(); // แสดงข้อความแจ้งเตือน
+                firstInvalid.focus(); // โฟกัสไปที่ช่องที่ยังไม่ได้กรอก
+            }
+        });
+    </script>
+</body>
+</html>

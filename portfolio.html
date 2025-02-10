@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black text-white">
+    <nav class="bg-cyan-400 text-black p-4 shadow-lg">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-lg font-bold">My Portfolio</h1>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="hover:text-gray-800">Home</a></li>
+          <li>
+            <a href="portfolio.html" class="hover:text-gray-800">Portfolio</a>
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-gray-800">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="container mx-auto my-12">
+      <div class="text-4xl font-bold text-blue-400 text-center mb-8">
+        My Works
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <!-- Card 1 -->
+        <div class="bg-gray-900 p-4 rounded shadow-lg flex flex-col justify-between">
+          <img
+            src="img/omlet.jpg"
+            alt="Project 1"
+            class="w-full h-60 object-cover rounded"
+          />
+          <div class="mt-4">
+            <h2 class="text-lg font-bold text-cyan-400">Menu HTML</h2>
+            <p class="text-gray-400">project 1</p>
+          </div>
+          <a
+            href="project1.html"
+            class="text-cyan-400 mt-2 block hover:underline"
+          >
+            View More
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-gray-900 p-4 rounded shadow-lg flex flex-col justify-between">
+          <img
+            src="img\360_F_408917733_WuJGcub0icxaQ7P266wMFK1oCWoB5fZR.jpg"
+            alt="Project 2"
+            class="w-full h-60 object-cover rounded"
+          />
+          <div class="mt-4">
+            <h2 class="text-lg font-bold text-cyan-400">Form HTML + CSS</h2>
+            <p class="text-gray-400">project 2</p>
+          </div>
+          <a
+            href="project2.html"
+            class="text-cyan-400 mt-2 block hover:underline"
+          >
+            View More
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-gray-900 p-4 rounded shadow-lg flex flex-col justify-between">
+          <img
+            src="img\CSS-Box-Model.webp"
+            alt="Project 3"
+            class="w-full h-60 object-cover rounded"
+          />
+          <div class="mt-4">
+            <h2 class="text-lg font-bold text-cyan-400">Box Model</h2>
+            <p class="text-gray-400">project 3</p>
+          </div>
+          <a
+            href="project3.html"
+            class="text-cyan-400 mt-2 block hover:underline"
+          >
+            View More
+          </a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-gray-900 p-4 rounded shadow-lg flex flex-col justify-between">
+          <img
+            src="img\business-data-analysis2.jpg"
+            alt="Project 4"
+            class="w-full h-60 object-cover rounded"
+          />
+          <div class="mt-4">
+            <h2 class="text-lg font-bold text-cyan-400">Data Analysis</h2>
+            <p class="text-gray-400">Project 4</p>
+          </div>
+          <a
+            href="project4.html"
+            class="text-cyan-400 mt-2 block hover:underline"
+          >
+            View More
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
